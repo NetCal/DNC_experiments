@@ -16,6 +16,15 @@ The othter subpackages of de.uni_kl.cs.discodnc.experiments contain the actual n
 If you use any of the provided server graphs, please use provide the given reference (BibTex entry in de.uni_kl.cs.discodnc.experiments) in any resulting publication.
 
 The server graphs may have been created by an external topology creator. In this case, we add as much additional information as possible in order to recreate the server graphs, for instance the original output of that external tool. In that case, we apply the conversion from topology to server graph as depicted in the following publication:  
-    *Iterative Design Space Exploration for Networks Requiring Performance Guarantees  
-    (Bruno Cattelan, Steffen Bondorf),  
-    In Proc. of the IEEE/AIAA 36th Digital Avionics Systems Conference (DASC), 2017.*
+
+```plain
+@inproceedings{DiscoDNCv2:Modeling:IterativeDesign,
+  author    = {Bruno Cattelan and Steffen Bondorf},
+  title     = {Iterative Design Space Exploration for Networks Requiring Performance Guarantees},
+  booktitle = {Proc. of the IEEE/AIAA 36th Digital Avionics Systems Conference},
+  series    = {DASC '17},
+  month     = {September},
+  year      = 2017,
+  url       = {https://ieeexplore.ieee.org/document/8102106/}
+}
+```
