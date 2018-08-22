@@ -52,14 +52,14 @@ public class Pomacs2017 {
 		String dir = "";
 		try {
 			dir = System.getProperty("user.dir") + 
-					"/src/main/java/de/uni_kl/cs/discodnc/experiments/pomacs2017results/";
+					"/src/experiments/java/de/uni_kl/cs/discodnc/experiments/pomacs2017results/";
 			dir = dir.trim();
 			if (dir.charAt(dir.length() - 1) != '/') {
 				dir += "/";
 			}
 
 			LinkedList<Integer> num_net_devices = new LinkedList<Integer>(
-					Arrays.asList(20, 40, 60, 80, 100, 120, 140, 160, 180, 200, 220, 240, 260, 280, 300, 400, 500, 1000
+					Arrays.asList(20, 40, 60//, 80, 100, 120, 140, 160, 180, 200, 220, 240, 260, 280, 300, 400, 500, 1000
 					));
 
 			for (int devices : num_net_devices) {
