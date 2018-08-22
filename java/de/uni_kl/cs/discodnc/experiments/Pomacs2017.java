@@ -37,7 +37,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 
 import de.uni_kl.cs.discodnc.experiments.pomacs2017networks.*;
-import de.uni_kl.cs.discodnc.nc.CompFFApresets;
+import de.uni_kl.cs.discodnc.feedforward.CompFFApresets;
 import de.uni_kl.cs.discodnc.network.Flow;
 import de.uni_kl.cs.discodnc.network.Network;
 
