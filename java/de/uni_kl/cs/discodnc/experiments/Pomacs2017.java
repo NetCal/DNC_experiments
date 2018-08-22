@@ -38,8 +38,8 @@ import java.util.LinkedList;
 
 import de.uni_kl.cs.discodnc.experiments.pomacs2017servergraphs.*;
 import de.uni_kl.cs.discodnc.feedforward.CompFFApresets;
-import de.uni_kl.cs.discodnc.server_graph.Flow;
-import de.uni_kl.cs.discodnc.server_graph.ServerGraph;
+import de.uni_kl.cs.discodnc.network.server_graph.Flow;
+import de.uni_kl.cs.discodnc.network.server_graph.ServerGraph;
 
 public class Pomacs2017 {
 

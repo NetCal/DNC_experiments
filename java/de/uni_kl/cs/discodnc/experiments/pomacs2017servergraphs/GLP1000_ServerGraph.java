@@ -30,8 +30,8 @@ package de.uni_kl.cs.discodnc.experiments.pomacs2017servergraphs;
 
 import de.uni_kl.cs.discodnc.curves.Curve;
 import de.uni_kl.cs.discodnc.feedforward.AnalysisConfig.Multiplexing;
-import de.uni_kl.cs.discodnc.server_graph.ServerGraph;
-import de.uni_kl.cs.discodnc.server_graph.Server;
+import de.uni_kl.cs.discodnc.network.server_graph.Server;
+import de.uni_kl.cs.discodnc.network.server_graph.ServerGraph;
 
 public class GLP1000_ServerGraph{
 	public ServerGraph server_graph;

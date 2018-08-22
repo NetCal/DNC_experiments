@@ -32,8 +32,8 @@ import java.util.LinkedList;
 
 import de.uni_kl.cs.discodnc.curves.Curve;
 import de.uni_kl.cs.discodnc.feedforward.AnalysisConfig.Multiplexing;
-import de.uni_kl.cs.discodnc.server_graph.ServerGraph;
-import de.uni_kl.cs.discodnc.server_graph.Server;
+import de.uni_kl.cs.discodnc.network.server_graph.Server;
+import de.uni_kl.cs.discodnc.network.server_graph.ServerGraph;
 
 public class GLP240_ServerGraph{
 	public static ServerGraph server_graph;
