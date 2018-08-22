@@ -36,14 +36,14 @@ import java.io.Writer;
 import java.util.Arrays;
 import java.util.LinkedList;
 
-import de.uni_kl.cs.discodnc.experiments.pomacs2017networks.*;
+import de.uni_kl.cs.discodnc.experiments.pomacs2017servergraphs.*;
 import de.uni_kl.cs.discodnc.feedforward.CompFFApresets;
-import de.uni_kl.cs.discodnc.network.Flow;
-import de.uni_kl.cs.discodnc.network.Network;
+import de.uni_kl.cs.discodnc.server_graph.Flow;
+import de.uni_kl.cs.discodnc.server_graph.ServerGraph;
 
 public class Pomacs2017 {
 
-	private Network server_graph;
+	private ServerGraph server_graph;
 
 	private static String file_suffix = ".txt";
 
@@ -76,62 +76,62 @@ public class Pomacs2017 {
 
 	@SuppressWarnings("static-access")
 	public Pomacs2017(String input_output_path, int num_net_devices) throws Exception {
-		// Get the server graph
-		// See package de.uni_kl.cs.discodnc.experiments.pomacs2017networks
+		// Get the server graph for a network with a given number of devices.
+		// See package de.uni_kl.cs.discodnc.experiments.pomacs2017servergraphs
 		switch (num_net_devices) {
 		case 20:
-			server_graph = (new GLP20_ServerGraph()).network;
+			server_graph = (new GLP20_ServerGraph()).server_graph;
 			break;
 		case 40:
-			server_graph = (new GLP40_ServerGraph()).network;
+			server_graph = (new GLP40_ServerGraph()).server_graph;
 			break;
 		case 60:
-			server_graph = (new GLP60_ServerGraph()).network;
+			server_graph = (new GLP60_ServerGraph()).server_graph;
 			break;
 		case 80:
-			server_graph = (new GLP80_ServerGraph()).network;
+			server_graph = (new GLP80_ServerGraph()).server_graph;
 			break;
 		case 100:
-			server_graph = (new GLP100_ServerGraph()).network;
+			server_graph = (new GLP100_ServerGraph()).server_graph;
 			break;
 		case 120:
-			server_graph = (new GLP120_ServerGraph()).network;
+			server_graph = (new GLP120_ServerGraph()).server_graph;
 			break;
 		case 140:
-			server_graph = (new GLP140_ServerGraph()).network;
+			server_graph = (new GLP140_ServerGraph()).server_graph;
 			break;
 		case 160:
-			server_graph = (new GLP160_ServerGraph()).network;
+			server_graph = (new GLP160_ServerGraph()).server_graph;
 			break;
 		case 180:
-			server_graph = (new GLP180_ServerGraph()).network;
+			server_graph = (new GLP180_ServerGraph()).server_graph;
 			break;
 		case 200:
-			server_graph = (new GLP200_ServerGraph()).network;
+			server_graph = (new GLP200_ServerGraph()).server_graph;
 			break;
 		case 220:
-			server_graph = (new GLP220_ServerGraph()).network;
+			server_graph = (new GLP220_ServerGraph()).server_graph;
 			break;
 		case 240:
-			server_graph = (new GLP240_ServerGraph()).network;
+			server_graph = (new GLP240_ServerGraph()).server_graph;
 			break;
 		case 260:
-			server_graph = (new GLP260_ServerGraph()).network;
+			server_graph = (new GLP260_ServerGraph()).server_graph;
 			break;
 		case 280:
-			server_graph = (new GLP280_ServerGraph()).network;
+			server_graph = (new GLP280_ServerGraph()).server_graph;
 			break;
 		case 300:
-			server_graph = (new GLP300_ServerGraph()).network;
+			server_graph = (new GLP300_ServerGraph()).server_graph;
 			break;
 		case 400:
-			server_graph = (new GLP400_ServerGraph()).network;
+			server_graph = (new GLP400_ServerGraph()).server_graph;
 			break;
 		case 500:
-			server_graph = (new GLP500_ServerGraph()).network;
+			server_graph = (new GLP500_ServerGraph()).server_graph;
 			break;
 		case 1000:
-			server_graph = (new GLP1000_ServerGraph()).network;
+			server_graph = (new GLP1000_ServerGraph()).server_graph;
 			break;
 
 		default:
