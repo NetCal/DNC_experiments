@@ -37,11 +37,6 @@ public class GLP1000_ServerGraph{
 	public ServerGraph server_graph;
 	private Server[] servers;
 	private static Curve factory = Curve.getFactory();
-
-	public static void main( String[] args ) {
-		@SuppressWarnings("unused")
-		GLP1000_ServerGraph ng = new GLP1000_ServerGraph();
-	}
 	
 	public GLP1000_ServerGraph() {
 		try{
