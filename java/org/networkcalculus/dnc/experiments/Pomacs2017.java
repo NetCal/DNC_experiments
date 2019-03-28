@@ -164,14 +164,14 @@ public class Pomacs2017 {
 		Writer delay_writer = new OutputStreamWriter(new FileOutputStream(delay_file), "UTF-8");
 		PrintWriter delay_pw = new PrintWriter(delay_writer);
 
-		delay_pw.println("Fid, TFA_D, SFA_D, PMOO_D");
+		delay_pw.println("Fid, TFA_D, SFA_D, PMOO_D, TMA_D");
 		delay_pw.flush();
 
 		File execT_file = new File(input_output_path + Integer.toString(num_net_devices) + "_execT" + file_suffix);
 		Writer execT_writer = new OutputStreamWriter(new FileOutputStream(execT_file), "UTF-8");
 		PrintWriter execT_pw = new PrintWriter(execT_writer);
 
-		execT_pw.println("Fid, TFA_T, SFA_T, PMOO_T");
+		execT_pw.println("Fid, TFA_T, SFA_T, PMOO_T, TMA_T");
 		execT_pw.flush();
 
 		for (Flow flow_of_interest : server_graph.getFlows()) {
@@ -203,6 +203,19 @@ public class Pomacs2017 {
 			t_stop_solving = System.nanoTime();
 
 			delay_pw.print(analyses.sf_analysis.getDelayBound().toString());
+			delay_pw.print(", ");
+			delay_pw.flush();
+
+			execT_pw.print(t_stop_solving - t_start_solving);
+			execT_pw.print(", ");
+			execT_pw.flush();
+
+			// TMA + aggrTMAB
+			t_start_solving = System.nanoTime();
+			analyses.tandem_matching_analysis.performAnalysis(flow_of_interest);
+			t_stop_solving = System.nanoTime();
+
+			delay_pw.print(analyses.tandem_matching_analysis.getDelayBound().toString());
 			delay_pw.print(", ");
 			delay_pw.flush();
 
