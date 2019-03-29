@@ -40,17 +40,13 @@ import org.networkcalculus.dnc.network.server_graph.Flow;
 import org.networkcalculus.dnc.network.server_graph.ServerGraph;
 
 public class Pomacs2017 {
-
 	private ServerGraph server_graph;
 
 	private static String file_suffix = ".txt";
 
 	public static void main(String[] args) {
-
-		String dir = "";
 		try {
-			dir = System.getProperty("user.dir") + 
-					"/experiments/pomacs2017results/";
+			String dir = System.getProperty("user.dir") + "/experiments/pomacs2017results/";
 			dir = dir.trim();
 			if (dir.charAt(dir.length() - 1) != '/') {
 				dir += "/";
