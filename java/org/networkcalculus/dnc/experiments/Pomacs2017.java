@@ -46,7 +46,7 @@ public class Pomacs2017 {
 
 	public static void main(String[] args) {
 		try {
-			String dir = System.getProperty("user.dir") + "/experiments/pomacs2017results/";
+			String dir = System.getProperty("user.dir") + "/experiments/src/pomacs2017results/";
 			dir = dir.trim();
 			if (dir.charAt(dir.length() - 1) != '/') {
 				dir += "/";
