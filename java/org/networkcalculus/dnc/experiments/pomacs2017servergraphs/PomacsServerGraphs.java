@@ -2,7 +2,7 @@ package org.networkcalculus.dnc.experiments.pomacs2017servergraphs;
 
 import org.networkcalculus.dnc.network.server_graph.ServerGraph;
 
-public class PomacsServerGraphs {
+public final class PomacsServerGraphs {
 	public static ServerGraph getServerGraph( int num_net_devices ) {
 		switch (num_net_devices) {
 		case 20:
