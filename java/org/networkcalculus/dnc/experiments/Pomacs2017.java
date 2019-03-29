@@ -35,24 +35,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 
 import org.networkcalculus.dnc.CompFFApresets;
-import org.networkcalculus.dnc.experiments.pomacs2017servergraphs.GLP1000_ServerGraph;
-import org.networkcalculus.dnc.experiments.pomacs2017servergraphs.GLP100_ServerGraph;
-import org.networkcalculus.dnc.experiments.pomacs2017servergraphs.GLP120_ServerGraph;
-import org.networkcalculus.dnc.experiments.pomacs2017servergraphs.GLP140_ServerGraph;
-import org.networkcalculus.dnc.experiments.pomacs2017servergraphs.GLP160_ServerGraph;
-import org.networkcalculus.dnc.experiments.pomacs2017servergraphs.GLP180_ServerGraph;
-import org.networkcalculus.dnc.experiments.pomacs2017servergraphs.GLP200_ServerGraph;
-import org.networkcalculus.dnc.experiments.pomacs2017servergraphs.GLP20_ServerGraph;
-import org.networkcalculus.dnc.experiments.pomacs2017servergraphs.GLP220_ServerGraph;
-import org.networkcalculus.dnc.experiments.pomacs2017servergraphs.GLP240_ServerGraph;
-import org.networkcalculus.dnc.experiments.pomacs2017servergraphs.GLP260_ServerGraph;
-import org.networkcalculus.dnc.experiments.pomacs2017servergraphs.GLP280_ServerGraph;
-import org.networkcalculus.dnc.experiments.pomacs2017servergraphs.GLP300_ServerGraph;
-import org.networkcalculus.dnc.experiments.pomacs2017servergraphs.GLP400_ServerGraph;
-import org.networkcalculus.dnc.experiments.pomacs2017servergraphs.GLP40_ServerGraph;
-import org.networkcalculus.dnc.experiments.pomacs2017servergraphs.GLP500_ServerGraph;
-import org.networkcalculus.dnc.experiments.pomacs2017servergraphs.GLP60_ServerGraph;
-import org.networkcalculus.dnc.experiments.pomacs2017servergraphs.GLP80_ServerGraph;
+import org.networkcalculus.dnc.experiments.pomacs2017servergraphs.PomacsServerGraphs;
 import org.networkcalculus.dnc.network.server_graph.Flow;
 import org.networkcalculus.dnc.network.server_graph.ServerGraph;
 
@@ -89,70 +72,8 @@ public class Pomacs2017 {
 		}
 	}
 
-	@SuppressWarnings("static-access")
 	public Pomacs2017(String input_output_path, int num_net_devices) throws Exception {
-		// Get the server graph for a network with a given number of devices.
-		// See package org.networkcalculus.dnc.experiments.pomacs2017servergraphs
-		switch (num_net_devices) {
-		case 20:
-			server_graph = (new GLP20_ServerGraph()).server_graph;
-			break;
-		case 40:
-			server_graph = (new GLP40_ServerGraph()).server_graph;
-			break;
-		case 60:
-			server_graph = (new GLP60_ServerGraph()).server_graph;
-			break;
-		case 80:
-			server_graph = (new GLP80_ServerGraph()).server_graph;
-			break;
-		case 100:
-			server_graph = (new GLP100_ServerGraph()).server_graph;
-			break;
-		case 120:
-			server_graph = (new GLP120_ServerGraph()).server_graph;
-			break;
-		case 140:
-			server_graph = (new GLP140_ServerGraph()).server_graph;
-			break;
-		case 160:
-			server_graph = (new GLP160_ServerGraph()).server_graph;
-			break;
-		case 180:
-			server_graph = (new GLP180_ServerGraph()).server_graph;
-			break;
-		case 200:
-			server_graph = (new GLP200_ServerGraph()).server_graph;
-			break;
-		case 220:
-			server_graph = (new GLP220_ServerGraph()).server_graph;
-			break;
-		case 240:
-			server_graph = (new GLP240_ServerGraph()).server_graph;
-			break;
-		case 260:
-			server_graph = (new GLP260_ServerGraph()).server_graph;
-			break;
-		case 280:
-			server_graph = (new GLP280_ServerGraph()).server_graph;
-			break;
-		case 300:
-			server_graph = (new GLP300_ServerGraph()).server_graph;
-			break;
-		case 400:
-			server_graph = (new GLP400_ServerGraph()).server_graph;
-			break;
-		case 500:
-			server_graph = (new GLP500_ServerGraph()).server_graph;
-			break;
-		case 1000:
-			server_graph = (new GLP1000_ServerGraph()).server_graph;
-			break;
-
-		default:
-			System.out.println("Invalid number of network devices: " + Integer.toString(num_net_devices));
-			System.exit(0);
-		}
+		server_graph = PomacsServerGraphs.getServerGraph(num_net_devices);
 
 		CompFFApresets analyses = new CompFFApresets(server_graph);
 
