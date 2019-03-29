@@ -69,7 +69,7 @@ public class Pomacs2017 {
 				}
 			}
 		} catch (Exception e) {
-			System.out.println(e.toString());
+			e.printStackTrace();
 		}
 	}
 
