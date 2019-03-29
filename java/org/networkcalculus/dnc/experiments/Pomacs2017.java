@@ -57,8 +57,13 @@ public class Pomacs2017 {
 			}
 
 			LinkedList<Integer> num_net_devices = new LinkedList<Integer>(
-					Arrays.asList(20, 40, 60, 80, 100, 120, 140, 160, 180, 200, 220, 240, 260, 280, 300, 400, 500, 1000
-					));
+					Arrays.asList(
+						      20,  40,  60,  80, 
+						100, 120, 140, 160, 180, 
+						200, 220, 240, 260, 280, 
+						300, 400, 500, 
+						1000
+				));
 
 			for (int devices : num_net_devices) {
 				try {
