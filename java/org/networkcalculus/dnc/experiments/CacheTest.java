@@ -94,14 +94,14 @@ public class CacheTest {
 		tma_conv_config.setUseArrivalBoundsCache( false );
 		TandemMatchingAnalysis tma_conv = new TandemMatchingAnalysis( server_graph, tma_conv_config );
 
-		AnalysisConfig tma_cache_config = base_config.copy();
-		tma_cache_config.setConvolveAlternativeArrivalBounds( false );
-		tma_cache_config.setUseArrivalBoundsCache( false );
-		TandemMatchingAnalysis tma_cache = new TandemMatchingAnalysis( server_graph, tma_cache_config );
+//		AnalysisConfig tma_cache_config = base_config.copy();
+//		tma_cache_config.setConvolveAlternativeArrivalBounds( false );
+//		tma_cache_config.setUseArrivalBoundsCache( true );
+//		TandemMatchingAnalysis tma_cache = new TandemMatchingAnalysis( server_graph, tma_cache_config );
 		
 		AnalysisConfig tma_conv_cache_config = base_config.copy();
 		tma_conv_cache_config.setConvolveAlternativeArrivalBounds( true );
-		tma_conv_cache_config.setUseArrivalBoundsCache( false );
+		tma_conv_cache_config.setUseArrivalBoundsCache( true );
 		TandemMatchingAnalysis tma_conv_cache = new TandemMatchingAnalysis( server_graph, tma_conv_cache_config );
 		
 		long t_start_solving, t_stop_solving;
@@ -113,7 +113,7 @@ public class CacheTest {
 		PrintWriter delay_pw = new PrintWriter(delay_writer);
 
 //		delay_pw.println("Fid, TMA_D, TMA_conv_D, TMA_cache_D, TMA_conv_cache_D, Sanity");
-		delay_pw.println("Fid, TMA_conv_D, TMA_cache_D, TMA_conv_cache_D, Sanity");
+		delay_pw.println("Fid, TMA_conv_D, TMA_conv_cache_D, Sanity");
 		delay_pw.flush();
 
 		File execT_file = new File(input_output_path + Integer.toString(num_net_devices) + "_execT" + file_suffix);
@@ -121,7 +121,7 @@ public class CacheTest {
 		PrintWriter execT_pw = new PrintWriter(execT_writer);
 
 //		execT_pw.println("Fid, TMA_T, TMA_conv_T, TMA_cache_T, TMA_conv_cache_T");
-		execT_pw.println("Fid, TMA_conv_T, TMA_cache_T, TMA_conv_cache_T");
+		execT_pw.println("Fid, TMA_conv_T, TMA_conv_cache_T");
 		execT_pw.flush();
 		
 		/*
@@ -174,18 +174,18 @@ public class CacheTest {
 			execT_pw.flush();
 			
 			
-			// TMA_cache
-			t_start_solving = System.nanoTime();
-			tma_cache.performAnalysis(flow_of_interest);
-			t_stop_solving = System.nanoTime();
-
-			delay_pw.print(tma_cache.getDelayBound().toString());
-			delay_pw.print(", ");
-			delay_pw.flush();
-
-			execT_pw.print(t_stop_solving - t_start_solving);
-			execT_pw.print(", ");
-			execT_pw.flush();
+//			// TMA_cache
+//			t_start_solving = System.nanoTime();
+//			tma_cache.performAnalysis(flow_of_interest);
+//			t_stop_solving = System.nanoTime();
+//
+//			delay_pw.print(tma_cache.getDelayBound().toString());
+//			delay_pw.print(", ");
+//			delay_pw.flush();
+//
+//			execT_pw.print(t_stop_solving - t_start_solving);
+//			execT_pw.print(", ");
+//			execT_pw.flush();
 			
 			
 			// TMA_conv_cache
@@ -202,10 +202,10 @@ public class CacheTest {
 			
 			
 			// Delay Bound Sanity
-			sanity_equal_bounds = 
-//					tma.getDelayBound().eq(tma_conv.getDelayBound()) && 
-					tma_conv.getDelayBound().eq(tma_cache.getDelayBound())
-					&& tma_cache.getDelayBound().eq(tma_conv_cache.getDelayBound());
+			sanity_equal_bounds = tma_conv.getDelayBound().eq(tma_conv_cache.getDelayBound());
+//					tma.getDelayBound().eq(tma_conv.getDelayBound()) 
+//					&& tma_conv.getDelayBound().eq(tma_cache.getDelayBound())
+//					&& tma_cache.getDelayBound().eq(tma_conv_cache.getDelayBound());
 
 			delay_pw.print(Boolean.toString(sanity_equal_bounds));
 			delay_pw.println();
