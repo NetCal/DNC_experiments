@@ -13715,8 +13715,12 @@ public class GLP120_ServerGraph{
 		servers_on_path_s.clear();
 
 	}
-
-	public GLP120_ServerGraph() {
+ 
+	private GLP120_ServerGraph() {
+     
+ }
+ 
+	static  {
 		try{
 			servers = new Server[398];
 			server_graph = new ServerGraph();

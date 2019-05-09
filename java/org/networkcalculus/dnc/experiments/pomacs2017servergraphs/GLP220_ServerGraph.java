@@ -26862,7 +26862,11 @@ public class GLP220_ServerGraph{
 
 	}
 
-	public GLP220_ServerGraph() {
+	private GLP220_ServerGraph() {
+	    
+	}
+	
+	static {
 		try{
 			servers = new Server[744];
 			server_graph = new ServerGraph();

@@ -1265,7 +1265,11 @@ public class GLP20_ServerGraph{
 
 	}
 
-	public GLP20_ServerGraph() {
+	private GLP20_ServerGraph() {
+	    
+	}
+	
+	static {
 		try{
 			servers = new Server[38];
 			server_graph = new ServerGraph();

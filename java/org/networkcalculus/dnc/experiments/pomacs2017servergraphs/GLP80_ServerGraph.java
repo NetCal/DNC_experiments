@@ -8733,7 +8733,11 @@ public class GLP80_ServerGraph{
 
 	}
 
-	public GLP80_ServerGraph() {
+	private GLP80_ServerGraph() {
+	    
+	}
+	
+	static {
 		try{
 			servers = new Server[282];
 			server_graph = new ServerGraph();
