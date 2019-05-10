@@ -3433,7 +3433,11 @@ public class GLP40_ServerGraph{
 
 	}
 
-	public GLP40_ServerGraph() {
+	private GLP40_ServerGraph() {
+	    
+	}
+	
+	static {
 		try{
 			servers = new Server[118];
 			server_graph = new ServerGraph();

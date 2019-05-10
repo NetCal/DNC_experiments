@@ -32236,7 +32236,11 @@ public class GLP240_ServerGraph{
 
 	}
 
-	public GLP240_ServerGraph() {
+	private GLP240_ServerGraph() {
+	    
+	}
+	
+	static {
 		try{
 			servers = new Server[882];
 			server_graph = new ServerGraph();

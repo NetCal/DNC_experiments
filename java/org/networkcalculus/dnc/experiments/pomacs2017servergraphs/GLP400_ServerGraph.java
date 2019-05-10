@@ -60309,7 +60309,11 @@ public class GLP400_ServerGraph{
 
 	}
 
-	public GLP400_ServerGraph() {
+	private GLP400_ServerGraph() {
+	    
+	}
+	
+	static {
 		try{
 			servers = new Server[1478];
 			server_graph = new ServerGraph();

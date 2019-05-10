@@ -27103,7 +27103,11 @@ public class GLP200_ServerGraph{
 
 	}
 
-	public GLP200_ServerGraph() {
+	private GLP200_ServerGraph() {
+	    
+	}
+	
+	static {
 		try{
 			servers = new Server[740];
 			server_graph = new ServerGraph();
