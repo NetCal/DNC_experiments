@@ -36,7 +36,7 @@ import org.networkcalculus.dnc.AnalysisConfig;
 import org.networkcalculus.dnc.AnalysisConfig.ArrivalBoundMethod;
 import org.networkcalculus.dnc.AnalysisConfig.MaxScEnforcement;
 import org.networkcalculus.dnc.AnalysisConfig.MultiplexingEnforcement;
-import org.networkcalculus.dnc.experiments.pomacs2017servergraphs.*;
+import org.networkcalculus.dnc.experiments.pomacs2017servergraphs.PomacsServerGraphs;
 import org.networkcalculus.dnc.network.server_graph.Flow;
 import org.networkcalculus.dnc.network.server_graph.ServerGraph;
 import org.networkcalculus.dnc.tandem.analyses.TandemMatchingAnalysis;
