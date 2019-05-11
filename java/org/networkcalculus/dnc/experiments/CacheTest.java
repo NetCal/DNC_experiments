@@ -36,7 +36,8 @@ import org.networkcalculus.dnc.AnalysisConfig;
 import org.networkcalculus.dnc.AnalysisConfig.ArrivalBoundMethod;
 import org.networkcalculus.dnc.AnalysisConfig.MaxScEnforcement;
 import org.networkcalculus.dnc.AnalysisConfig.MultiplexingEnforcement;
-import org.networkcalculus.dnc.experiments.pomacs2017servergraphs.*;
+import org.networkcalculus.dnc.experiments.pomacs2017servergraphs.PomacsServerGraphs;
+import org.networkcalculus.dnc.feedforward.ArrivalBoundDispatch;
 import org.networkcalculus.dnc.network.server_graph.Flow;
 import org.networkcalculus.dnc.network.server_graph.ServerGraph;
 import org.networkcalculus.dnc.tandem.analyses.TandemMatchingAnalysis;
@@ -136,6 +137,8 @@ public class CacheTest {
 		 */
 		boolean sanity_equal_bounds;
 		for (Flow flow_of_interest : server_graph.getFlows()) {
+			ArrivalBoundDispatch.clearAllCaches();
+			
 			// invariant IDs are encoded in the alias;
 			// newly assigned IDs depend on the order of addition of flows to the server graph.
 			flowIdstr = flow_of_interest.getAlias().substring(1);
