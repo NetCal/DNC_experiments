@@ -37278,7 +37278,11 @@ public class GLP280_ServerGraph{
 
 	}
 
-	public GLP280_ServerGraph() {
+	private GLP280_ServerGraph() {
+	    
+	}
+	
+	static {
 		try{
 			servers = new Server[994];
 			server_graph = new ServerGraph();

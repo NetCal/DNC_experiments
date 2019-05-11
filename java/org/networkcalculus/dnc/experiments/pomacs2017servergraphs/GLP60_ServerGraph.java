@@ -5175,7 +5175,11 @@ public class GLP60_ServerGraph{
 
 	}
 
-	public GLP60_ServerGraph() {
+	private GLP60_ServerGraph() {
+	    
+	}
+	
+	static {
 		try{
 			servers = new Server[164];
 			server_graph = new ServerGraph();

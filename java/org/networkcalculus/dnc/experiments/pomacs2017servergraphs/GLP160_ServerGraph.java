@@ -20087,7 +20087,11 @@ public class GLP160_ServerGraph{
 
 	}
 
-	public GLP160_ServerGraph() {
+	private GLP160_ServerGraph() {
+	    
+	}
+	
+	static {
 		try{
 			servers = new Server[572];
 			server_graph = new ServerGraph();

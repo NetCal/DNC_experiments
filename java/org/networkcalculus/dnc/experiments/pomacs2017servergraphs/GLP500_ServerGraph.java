@@ -74957,7 +74957,11 @@ public class GLP500_ServerGraph{
 
 	}
 
-	public GLP500_ServerGraph() {
+	private GLP500_ServerGraph() {
+	    
+	}
+	
+	static {
 		try{
 			servers = new Server[1876];
 			server_graph = new ServerGraph();

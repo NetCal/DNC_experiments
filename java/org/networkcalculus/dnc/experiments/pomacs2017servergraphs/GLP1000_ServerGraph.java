@@ -37,11 +37,15 @@ import org.networkcalculus.dnc.network.server_graph.Server;
 import org.networkcalculus.dnc.network.server_graph.ServerGraph;
 
 public class GLP1000_ServerGraph{
-	public ServerGraph server_graph;
-	private Server[] servers;
+	public static ServerGraph server_graph;
+	private static Server[] servers;
 	private static Curve factory = Curve.getFactory();
 	
-	public GLP1000_ServerGraph() {
+	private GLP1000_ServerGraph() {
+	    
+	}
+	
+	static {
 		try{
 			servers = new Server[3626];
 			server_graph = new ServerGraph();
@@ -65,7 +69,7 @@ public class GLP1000_ServerGraph{
 		}
 	}
 
-	public void createServers1() throws Exception {
+	public static void createServers1() throws Exception {
 		servers[653] = server_graph.addServer( "s653", factory.createServiceCurve( "SC{(0.0,0.0),10000.0}" ), factory.createMaxServiceCurve( "MSC{(0.0,0.0),0.0;!(0.0,Infinity),0.0}" ), Multiplexing.ARBITRARY, true, true );
 		servers[3307] = server_graph.addServer( "s3307", factory.createServiceCurve( "SC{(0.0,0.0),10000.0}" ), factory.createMaxServiceCurve( "MSC{(0.0,0.0),0.0;!(0.0,Infinity),0.0}" ), Multiplexing.ARBITRARY, true, true );
 		servers[3341] = server_graph.addServer( "s3341", factory.createServiceCurve( "SC{(0.0,0.0),10000.0}" ), factory.createMaxServiceCurve( "MSC{(0.0,0.0),0.0;!(0.0,Infinity),0.0}" ), Multiplexing.ARBITRARY, true, true );
@@ -568,7 +572,7 @@ public class GLP1000_ServerGraph{
 		servers[2500] = server_graph.addServer( "s2500", factory.createServiceCurve( "SC{(0.0,0.0),10000.0}" ), factory.createMaxServiceCurve( "MSC{(0.0,0.0),0.0;!(0.0,Infinity),0.0}" ), Multiplexing.ARBITRARY, true, true );
 	}
 
-	public void createServers2() throws Exception {
+	public static void createServers2() throws Exception {
 		servers[2481] = server_graph.addServer( "s2481", factory.createServiceCurve( "SC{(0.0,0.0),10000.0}" ), factory.createMaxServiceCurve( "MSC{(0.0,0.0),0.0;!(0.0,Infinity),0.0}" ), Multiplexing.ARBITRARY, true, true );
 		servers[247] = server_graph.addServer( "s247", factory.createServiceCurve( "SC{(0.0,0.0),10000.0}" ), factory.createMaxServiceCurve( "MSC{(0.0,0.0),0.0;!(0.0,Infinity),0.0}" ), Multiplexing.ARBITRARY, true, true );
 		servers[2314] = server_graph.addServer( "s2314", factory.createServiceCurve( "SC{(0.0,0.0),10000.0}" ), factory.createMaxServiceCurve( "MSC{(0.0,0.0),0.0;!(0.0,Infinity),0.0}" ), Multiplexing.ARBITRARY, true, true );
@@ -1071,7 +1075,7 @@ public class GLP1000_ServerGraph{
 		servers[554] = server_graph.addServer( "s554", factory.createServiceCurve( "SC{(0.0,0.0),10000.0}" ), factory.createMaxServiceCurve( "MSC{(0.0,0.0),0.0;!(0.0,Infinity),0.0}" ), Multiplexing.ARBITRARY, true, true );
 	}
 
-	public void createServers3() throws Exception {
+	public static void createServers3() throws Exception {
 		servers[1746] = server_graph.addServer( "s1746", factory.createServiceCurve( "SC{(0.0,0.0),10000.0}" ), factory.createMaxServiceCurve( "MSC{(0.0,0.0),0.0;!(0.0,Infinity),0.0}" ), Multiplexing.ARBITRARY, true, true );
 		servers[1961] = server_graph.addServer( "s1961", factory.createServiceCurve( "SC{(0.0,0.0),10000.0}" ), factory.createMaxServiceCurve( "MSC{(0.0,0.0),0.0;!(0.0,Infinity),0.0}" ), Multiplexing.ARBITRARY, true, true );
 		servers[2914] = server_graph.addServer( "s2914", factory.createServiceCurve( "SC{(0.0,0.0),10000.0}" ), factory.createMaxServiceCurve( "MSC{(0.0,0.0),0.0;!(0.0,Infinity),0.0}" ), Multiplexing.ARBITRARY, true, true );
@@ -1574,7 +1578,7 @@ public class GLP1000_ServerGraph{
 		servers[2204] = server_graph.addServer( "s2204", factory.createServiceCurve( "SC{(0.0,0.0),10000.0}" ), factory.createMaxServiceCurve( "MSC{(0.0,0.0),0.0;!(0.0,Infinity),0.0}" ), Multiplexing.ARBITRARY, true, true );
 	}
 
-	public void createServers4() throws Exception {
+	public static void createServers4() throws Exception {
 		servers[3254] = server_graph.addServer( "s3254", factory.createServiceCurve( "SC{(0.0,0.0),10000.0}" ), factory.createMaxServiceCurve( "MSC{(0.0,0.0),0.0;!(0.0,Infinity),0.0}" ), Multiplexing.ARBITRARY, true, true );
 		servers[1411] = server_graph.addServer( "s1411", factory.createServiceCurve( "SC{(0.0,0.0),10000.0}" ), factory.createMaxServiceCurve( "MSC{(0.0,0.0),0.0;!(0.0,Infinity),0.0}" ), Multiplexing.ARBITRARY, true, true );
 		servers[2516] = server_graph.addServer( "s2516", factory.createServiceCurve( "SC{(0.0,0.0),10000.0}" ), factory.createMaxServiceCurve( "MSC{(0.0,0.0),0.0;!(0.0,Infinity),0.0}" ), Multiplexing.ARBITRARY, true, true );
@@ -2077,7 +2081,7 @@ public class GLP1000_ServerGraph{
 		servers[1180] = server_graph.addServer( "s1180", factory.createServiceCurve( "SC{(0.0,0.0),10000.0}" ), factory.createMaxServiceCurve( "MSC{(0.0,0.0),0.0;!(0.0,Infinity),0.0}" ), Multiplexing.ARBITRARY, true, true );
 	}
 
-	public void createServers5() throws Exception {
+	public static void createServers5() throws Exception {
 		servers[3375] = server_graph.addServer( "s3375", factory.createServiceCurve( "SC{(0.0,0.0),10000.0}" ), factory.createMaxServiceCurve( "MSC{(0.0,0.0),0.0;!(0.0,Infinity),0.0}" ), Multiplexing.ARBITRARY, true, true );
 		servers[906] = server_graph.addServer( "s906", factory.createServiceCurve( "SC{(0.0,0.0),10000.0}" ), factory.createMaxServiceCurve( "MSC{(0.0,0.0),0.0;!(0.0,Infinity),0.0}" ), Multiplexing.ARBITRARY, true, true );
 		servers[1435] = server_graph.addServer( "s1435", factory.createServiceCurve( "SC{(0.0,0.0),10000.0}" ), factory.createMaxServiceCurve( "MSC{(0.0,0.0),0.0;!(0.0,Infinity),0.0}" ), Multiplexing.ARBITRARY, true, true );
@@ -2580,7 +2584,7 @@ public class GLP1000_ServerGraph{
 		servers[521] = server_graph.addServer( "s521", factory.createServiceCurve( "SC{(0.0,0.0),10000.0}" ), factory.createMaxServiceCurve( "MSC{(0.0,0.0),0.0;!(0.0,Infinity),0.0}" ), Multiplexing.ARBITRARY, true, true );
 	}
 
-	public void createServers6() throws Exception {
+	public static void createServers6() throws Exception {
 		servers[3294] = server_graph.addServer( "s3294", factory.createServiceCurve( "SC{(0.0,0.0),10000.0}" ), factory.createMaxServiceCurve( "MSC{(0.0,0.0),0.0;!(0.0,Infinity),0.0}" ), Multiplexing.ARBITRARY, true, true );
 		servers[460] = server_graph.addServer( "s460", factory.createServiceCurve( "SC{(0.0,0.0),10000.0}" ), factory.createMaxServiceCurve( "MSC{(0.0,0.0),0.0;!(0.0,Infinity),0.0}" ), Multiplexing.ARBITRARY, true, true );
 		servers[1057] = server_graph.addServer( "s1057", factory.createServiceCurve( "SC{(0.0,0.0),10000.0}" ), factory.createMaxServiceCurve( "MSC{(0.0,0.0),0.0;!(0.0,Infinity),0.0}" ), Multiplexing.ARBITRARY, true, true );
@@ -3083,7 +3087,7 @@ public class GLP1000_ServerGraph{
 		servers[2249] = server_graph.addServer( "s2249", factory.createServiceCurve( "SC{(0.0,0.0),10000.0}" ), factory.createMaxServiceCurve( "MSC{(0.0,0.0),0.0;!(0.0,Infinity),0.0}" ), Multiplexing.ARBITRARY, true, true );
 	}
 
-	public void createServers7() throws Exception {
+	public static void createServers7() throws Exception {
 		servers[3054] = server_graph.addServer( "s3054", factory.createServiceCurve( "SC{(0.0,0.0),10000.0}" ), factory.createMaxServiceCurve( "MSC{(0.0,0.0),0.0;!(0.0,Infinity),0.0}" ), Multiplexing.ARBITRARY, true, true );
 		servers[2462] = server_graph.addServer( "s2462", factory.createServiceCurve( "SC{(0.0,0.0),10000.0}" ), factory.createMaxServiceCurve( "MSC{(0.0,0.0),0.0;!(0.0,Infinity),0.0}" ), Multiplexing.ARBITRARY, true, true );
 		servers[3212] = server_graph.addServer( "s3212", factory.createServiceCurve( "SC{(0.0,0.0),10000.0}" ), factory.createMaxServiceCurve( "MSC{(0.0,0.0),0.0;!(0.0,Infinity),0.0}" ), Multiplexing.ARBITRARY, true, true );
@@ -3586,7 +3590,7 @@ public class GLP1000_ServerGraph{
 		servers[491] = server_graph.addServer( "s491", factory.createServiceCurve( "SC{(0.0,0.0),10000.0}" ), factory.createMaxServiceCurve( "MSC{(0.0,0.0),0.0;!(0.0,Infinity),0.0}" ), Multiplexing.ARBITRARY, true, true );
 	}
 
-	public void createServers8() throws Exception {
+	public static void createServers8() throws Exception {
 		servers[1671] = server_graph.addServer( "s1671", factory.createServiceCurve( "SC{(0.0,0.0),10000.0}" ), factory.createMaxServiceCurve( "MSC{(0.0,0.0),0.0;!(0.0,Infinity),0.0}" ), Multiplexing.ARBITRARY, true, true );
 		servers[1557] = server_graph.addServer( "s1557", factory.createServiceCurve( "SC{(0.0,0.0),10000.0}" ), factory.createMaxServiceCurve( "MSC{(0.0,0.0),0.0;!(0.0,Infinity),0.0}" ), Multiplexing.ARBITRARY, true, true );
 		servers[843] = server_graph.addServer( "s843", factory.createServiceCurve( "SC{(0.0,0.0),10000.0}" ), factory.createMaxServiceCurve( "MSC{(0.0,0.0),0.0;!(0.0,Infinity),0.0}" ), Multiplexing.ARBITRARY, true, true );

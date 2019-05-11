@@ -36712,7 +36712,11 @@ public class GLP260_ServerGraph{
 
 	}
 
-	public GLP260_ServerGraph() {
+	private GLP260_ServerGraph() {
+	    
+	}
+	
+	static {
 		try{
 			servers = new Server[976];
 			server_graph = new ServerGraph();
