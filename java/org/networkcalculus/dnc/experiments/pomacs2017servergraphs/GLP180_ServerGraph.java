@@ -30,13 +30,14 @@ import java.util.LinkedList;
 
 import org.networkcalculus.dnc.AnalysisConfig.Multiplexing;
 import org.networkcalculus.dnc.curves.Curve;
+import org.networkcalculus.dnc.curves.CurveFactory_Affine;
 import org.networkcalculus.dnc.network.server_graph.Server;
 import org.networkcalculus.dnc.network.server_graph.ServerGraph;
 
 public class GLP180_ServerGraph{
 	public static ServerGraph server_graph;
 	private static Server[] servers;
-	private static Curve factory = Curve.getFactory();
+	private static CurveFactory_Affine factory = Curve.getFactory();
 	
 	public static void createServers1() throws Exception {
 		servers[77] = server_graph.addServer( "s77", factory.createServiceCurve( "SC{(0.0,0.0),10000.0}" ), factory.createMaxServiceCurve( "MSC{(0.0,0.0),0.0;!(0.0,Infinity),0.0}" ), Multiplexing.ARBITRARY, true, true );
