@@ -28,6 +28,7 @@ package org.networkcalculus.dnc.experiments.pomacs2017servergraphs;
 
 import org.networkcalculus.dnc.AnalysisConfig.Multiplexing;
 import org.networkcalculus.dnc.curves.Curve;
+import org.networkcalculus.dnc.curves.CurveFactory_Affine;
 import org.networkcalculus.dnc.experiments.pomacs2017servergraphs.GLP1000_ServerGraph2;
 import org.networkcalculus.dnc.experiments.pomacs2017servergraphs.GLP1000_ServerGraph3;
 import org.networkcalculus.dnc.experiments.pomacs2017servergraphs.GLP1000_ServerGraph4;
@@ -39,7 +40,7 @@ import org.networkcalculus.dnc.network.server_graph.ServerGraph;
 public class GLP1000_ServerGraph{
 	public static ServerGraph server_graph;
 	private static Server[] servers;
-	private static Curve factory = Curve.getFactory();
+	private static CurveFactory_Affine factory = Curve.getFactory();
 	
 	private GLP1000_ServerGraph() {
 	    
