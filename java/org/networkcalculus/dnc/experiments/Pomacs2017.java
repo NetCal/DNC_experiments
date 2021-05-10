@@ -132,12 +132,12 @@ public class Pomacs2017 {
 			execT_pw.print(", ");
 			execT_pw.flush();
 
-			// TMA + aggrTMAB
+			// PMOO + aggrPMOOAB
 			t_start_solving = System.nanoTime();
-			analyses.tandem_matching_analysis.performAnalysis(flow_of_interest);
+			analyses.pmoo_analysis.performAnalysis(flow_of_interest);
 			t_stop_solving = System.nanoTime();
 
-			delay_pw.print(analyses.tandem_matching_analysis.getDelayBound().toString());
+			delay_pw.print(analyses.pmoo_analysis.getDelayBound().toString());
 			delay_pw.print(", ");
 			delay_pw.flush();
 
@@ -145,12 +145,12 @@ public class Pomacs2017 {
 			execT_pw.print(", ");
 			execT_pw.flush();
 
-			// PMOO + aggrPMOOAB
+			// TMA + aggrTMAB
 			t_start_solving = System.nanoTime();
-			analyses.pmoo_analysis.performAnalysis(flow_of_interest);
+			analyses.tandem_matching_analysis.performAnalysis(flow_of_interest);
 			t_stop_solving = System.nanoTime();
 
-			delay_pw.print(analyses.pmoo_analysis.getDelayBound().toString());
+			delay_pw.print(analyses.tandem_matching_analysis.getDelayBound().toString());
 			delay_pw.println();
 			delay_pw.flush();
 
